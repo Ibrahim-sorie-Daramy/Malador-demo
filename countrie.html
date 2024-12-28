@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Page - Malador Company Ltd</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Hero Section */
+      .hero-section {
+        background-image: url("/Images/TRAVEM.png"); /* Replace with your background image URL */
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-section h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+
+      .hero-section .btn-cta {
+        background-color: #ffc107;
+        color: #0a1d37;
+        border: none;
+        border-radius: 30px;
+        padding: 10px 20px;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      .hero-section .btn-cta:hover {
+        background-color: #e6a800;
+        transform: scale(1.1);
+      }
+
+      /* Country List Section */
+      .country-card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .country-card:hover {
+        transform: scale(1.05);
+      }
+
+      .country-card img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .country-card .btn-cta {
+        background-color: #ffc107;
+        color: #0a1d37;
+        border: none;
+        border-radius: 20px;
+        padding: 8px 16px;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      .country-card .btn-cta:hover {
+        background-color: #e6a800;
+      }
+
+      /* Navbar and Footer */
+      .navbar,
+      footer {
+        background-color: transparent;
+        color: white;
+      }
+
+      .navbar .nav-link {
+        color: white !important;
+        transition: color 0.3s;
+      }
+
+      .navbar .nav-link:hover {
+        color: #ffc107 !important;
+      }
+
+      footer {
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      /* Responsiveness */
+      @media (max-width: 768px) {
+        .hero-section h1 {
+          font-size: 2rem;
+        }
+
+        .hero-section .lead {
+          font-size: 1rem;
+        }
+
+        .country-card img {
+          height: 150px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .hero-section h1 {
+          font-size: 1.8rem;
+        }
+
+        .hero-section .btn-cta {
+          padding: 8px 16px;
+        }
+
+        .country-card img {
+          height: 120px;
+        }
+
+        .country-card .card-body {
+          text-align: center;
+        }
+      }
+    </style>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <a href="index.html">
+            <img class="mala" src="/Images/logo.png" alt=""
+          /></a>
+          <a class="navbar-brand" href="index.html">Malador Company Ltd</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/countrie.html">Countries</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#faq">FAQ</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <h1>Explore the World with Malador Travel</h1>
+      <p class="lead">Seamless travel solutions to your dream destinations.</p>
+    </section>
+
+    <!-- Country List Section -->
+    <section id="countries" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Available Destinations</h2>
+        <p class="text-center mb-5">
+          Discover detailed information and processing times for various
+          destinations.
+        </p>
+        <div class="row">
+          <!-- Country Card 1 -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card country-card">
+              <img
+                src="https://matrixpathimmigration.com/wp-content/uploads/2024/03/statue-liberty-usa.jpg"
+                alt="United States"
+              />
+              <div class="card-body">
+                <h5 class="card-title">United States</h5>
+                <p class="card-text">Processing Time: 2-4 weeks</p>
+                <p class="card-text">
+                  Explore the land of opportunities with hassle-free travel
+                  solutions.
+                </p>
+                <button class="btn btn-cta">Learn More</button>
+              </div>
+            </div>
+          </div>
+          <!-- Country Card 2 -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card country-card">
+              <img
+                src="https://keystoneacademic-res.cloudinary.com/image/upload/v1696411379/articles/educationscom/article-hero-image-4327.jpg"
+                alt="United Kingdom"
+              />
+              <div class="card-body">
+                <h5 class="card-title">United Kingdom</h5>
+                <p class="card-text">Processing Time: 3-5 weeks</p>
+                <p class="card-text">
+                  Experience rich history and culture with our efficient
+                  services.
+                </p>
+                <button class="btn btn-cta">Learn More</button>
+              </div>
+            </div>
+          </div>
+          <!-- Country Card 2 -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card country-card">
+              <img
+                src="https://www.internationalcitizens.com/wp-content/uploads/2022/09/iStock-1178852373.jpg"
+                alt="Canada"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Canada</h5>
+                <p class="card-text">Processing Time: 3-5 weeks</p>
+                <p class="card-text">
+                  Experience rich history and culture with our efficient
+                  services.
+                </p>
+                <button class="btn btn-cta">Learn More</button>
+              </div>
+            </div>
+          </div>
+          <!-- Country Card 2 -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card country-card">
+              <img
+                src="https://www.opengovpartnership.org/wp-content/uploads/2017/04/Germany.jpg"
+                alt="Germany"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Germany</h5>
+                <p class="card-text">Processing Time: 3-5 weeks</p>
+                <p class="card-text">
+                  Experience rich history and culture with our efficient
+                  services.
+                </p>
+                <button class="btn btn-cta">Learn More</button>
+              </div>
+            </div>
+          </div>
+          <!-- Country Card 2 -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card country-card">
+              <img
+                src="https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL2hvbGxhbmQtbmV0aGVybGFuZHMuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4Mjh9fX0="
+                alt="Holland"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Holland</h5>
+                <p class="card-text">Processing Time: 3-5 weeks</p>
+                <p class="card-text">
+                  Experience rich history and culture with our efficient
+                  services.
+                </p>
+                <button class="btn btn-cta">Learn More</button>
+              </div>
+            </div>
+          </div>
+          <!-- Country Card 2 -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card country-card">
+              <img
+                src="https://cdn.britannica.com/15/189715-050-4310222B/Dubai-United-Arab-Emirates-Burj-Khalifa-top.jpg"
+                alt="Dubai"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dubai</h5>
+                <p class="card-text">Processing Time: 3-5 weeks</p>
+                <p class="card-text">
+                  Experience rich history and culture with our efficient
+                  services.
+                </p>
+                <button class="btn btn-cta">Learn More</button>
+              </div>
+            </div>
+          </div>
+          <!-- Country Card 2 -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card country-card">
+              <img
+                src="https://canterburyconsultancy.com/wp-content/uploads/2022/10/4e4195aa-b9ca-42cd-923f-e8a65c8c5c7b.jpg"
+                alt="New Zealand"
+              />
+              <div class="card-body">
+                <h5 class="card-title">New Zealand</h5>
+                <p class="card-text">Processing Time: 3-5 weeks</p>
+                <p class="card-text">
+                  Experience rich history and culture with our efficient
+                  services.
+                </p>
+                <button class="btn btn-cta">Learn More</button>
+              </div>
+            </div>
+          </div>
+          <!-- Country Card 2 -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card country-card">
+              <img
+                src="https://t4.ftcdn.net/jpg/06/77/24/25/360_F_677242578_cUTwyYpwuQjhZUmmb0oiVZFuZNTsx4sd.jpg"
+                alt="Nigeria"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Nigeria</h5>
+                <p class="card-text">Processing Time: 3-5 weeks</p>
+                <p class="card-text">
+                  Experience rich history and culture with our efficient
+                  services.
+                </p>
+                <button class="btn btn-cta">Learn More</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Country Card 2 -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card country-card">
+              <img
+                src="https://www.campusfrance.org/sites/default/files/medias/images/2024-05/France_eiffel.jpg"
+                alt="France"
+              />
+              <div class="card-body">
+                <h5 class="card-title">France</h5>
+                <p class="card-text">Processing Time: 3-5 weeks</p>
+                <p class="card-text">
+                  Experience rich history and culture with our efficient
+                  services.
+                </p>
+                <button class="btn btn-cta">Learn More</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Country Card 2 -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card country-card">
+              <img
+                src="https://kenyanwallstreet.com/wp-content/uploads/2024/04/where-to-stay-in-nairobi-kenya.jpeg"
+                alt="Kenya"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Kenya</h5>
+                <p class="card-text">Processing Time: 3-5 weeks</p>
+                <p class="card-text">
+                  Experience rich history and culture with our efficient
+                  services.
+                </p>
+                <button class="btn btn-cta">Learn More</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Country Card 2 -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card country-card">
+              <img
+                src="https://career-advice.jobs.ac.uk/wp-content/uploads/South-Africa-e1634206886542.jpg.optimal.jpg"
+                alt="South Africa"
+              />
+              <div class="card-body">
+                <h5 class="card-title">South Africa</h5>
+                <p class="card-text">Processing Time: 3-5 weeks</p>
+                <p class="card-text">
+                  Experience rich history and culture with our efficient
+                  services.
+                </p>
+                <button class="btn btn-cta">Learn More</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Country Card 2 -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card country-card">
+              <img
+                src="https://www.thetimes.com/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F0636c382-ffa0-4979-941c-7bddb13cb190.jpg?crop=1320%2C880%2C440%2C0"
+                alt="Egypt"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Egypt</h5>
+                <p class="card-text">Processing Time: 3-5 weeks</p>
+                <p class="card-text">
+                  Experience rich history and culture with our efficient
+                  services.
+                </p>
+                <button class="btn btn-cta">Learn More</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Country Card 2 -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card country-card">
+              <img
+                src="https://www.murchisonfallsparkuganda.com/wp-content/uploads/2024/05/Kampala-Capital-City-750x450.jpg"
+                alt="uganda"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Uganda`</h5>
+                <p class="card-text">Processing Time: 3-5 weeks</p>
+                <p class="card-text">
+                  Experience rich history and culture with our efficient
+                  services.
+                </p>
+                <button class="btn btn-cta">Learn More</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Country Card 2 -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card country-card">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Acca.jpg/640px-Acca.jpg"
+                alt="Ghana"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Ghana</h5>
+                <p class="card-text">Processing Time: 3-5 weeks</p>
+                <p class="card-text">
+                  Experience rich history and culture with our efficient
+                  services.
+                </p>
+                <button class="btn btn-cta">Learn More</button>
+              </div>
+            </div>
+          </div>
+          <!-- Country Card 3 -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card country-card">
+              <img
+                src="https://i0.wp.com/expatra.com/wp-content/uploads/2020/01/limassol-cyprus-best-places.jpg?fit=1200%2C799&quality=80&ssl=1"
+                alt="Canada"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Cyprus</h5>
+                <p class="card-text">Processing Time: 4-6 weeks</p>
+                <p class="card-text">
+                  Discover breathtaking landscapes and vibrant cities with ease.
+                </p>
+                <button class="btn btn-cta">Learn More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 Malador Company Ltd. All Rights Reserved.</p>
+        <p>
+          Follow us on:
+          <a href="https://facebook.com" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          |
+          <a href="https://twitter.com" target="_blank"
+            ><i class="fa-brands fa-tiktok"></i
+          ></a>
+          |
+          <a href="https://twitter.com" target="_blank"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          |
+          <a href="https://instagram.com" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
